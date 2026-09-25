@@ -117,12 +117,69 @@ class _LoginViewState extends State<LoginView> {
                 style: TextStyle(color: Colors.blue),
               ),
             ),
+            SizedBox(
+              width: SizeConfig.width * 0.85,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Expanded(child: Divider(color: Colors.grey)),
+                  Text("or continue with"),
+                  Expanded(child: Divider(color: Colors.grey)),
+                ],
+              ),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Divider(color: Colors.grey),
-                Text("or continue with"),
-                Divider(color: Colors.grey),
+                Container(
+                  height: 45,
+                  width: 65,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.grey.shade200),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: Icon(Icons.facebook, color: Colors.blue),
+                  ),
+                ),
+                Container(
+                  height: 45,
+                  width: 65,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.grey.shade200),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  // child: IconButton(
+                  //   onPressed: () {},
+                  //   icon: Icon(Icons.google),
+                  // ),
+                ),
+                Container(
+                  height: 45,
+                  width: 65,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.grey.shade200),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: Icon(Icons.apple, color: Colors.black),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Don't have an account?",
+                  style: TextStyle(color: Colors.grey),
+                ),
+                TextButton(
+                  onPressed: () {},
+                  child: Text("Sign up", style: TextStyle(color: Colors.blue)),
+                ),
               ],
             ),
           ],
