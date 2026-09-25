@@ -11,6 +11,7 @@ class LoginView extends StatefulWidget {
 
 class _LoginViewState extends State<LoginView> {
   bool isPasswordVisible = false;
+  bool rememberMe = false;
   @override
   Widget build(BuildContext context) {
     TextEditingController emailController = TextEditingController();
@@ -76,6 +77,53 @@ class _LoginViewState extends State<LoginView> {
                   ),
                 ),
               ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Checkbox(
+                  value: rememberMe,
+                  onChanged: (value) {
+                    setState(() {
+                      rememberMe = value!;
+                    });
+                  },
+                  activeColor: Colors.blue,
+                ),
+                Text("Remember me"),
+              ],
+            ),
+            SizedBox(
+              width: SizeConfig.width * 0.9,
+              height: SizeConfig.height * 0.06,
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadiusGeometry.circular(30),
+                  ),
+                ),
+                child: Text(
+                  "Sign in",
+                  style: TextStyle(color: Colors.white, fontSize: 15),
+                ),
+              ),
+            ),
+            TextButton(
+              onPressed: () {},
+              child: Text(
+                "Forgot the password?",
+                style: TextStyle(color: Colors.blue),
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Divider(color: Colors.grey),
+                Text("or continue with"),
+                Divider(color: Colors.grey),
+              ],
             ),
           ],
         ),
