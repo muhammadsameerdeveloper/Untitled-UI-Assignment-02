@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled/screen/details_view.dart';
 import 'package:untitled/utils/app_colors.dart';
 
 class HomeView extends StatelessWidget {
@@ -153,86 +154,96 @@ class HomeView extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      Container(
-                        width: 305,
-                        height: 390,
-                        decoration: BoxDecoration(
-                          color: AppColors.darkGreyColor,
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.vertical(
-                                top: Radius.circular(15),
-                              ),
-                              child: Image.asset(
-                                "assets/images/House.jpg",
-                                height: 272,
-                              ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => DetailsView(),
                             ),
-                            Padding(
-                              padding: EdgeInsets.all(20),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'CRAFTSMAN HOUSE',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                      letterSpacing: 0.5,
-                                    ),
-                                  ),
-                                  SizedBox(height: 4),
-                                  Text(
-                                    '520 N Beaudry Ave Los Angeles',
-                                    style: TextStyle(
-                                      color: Colors.grey[400],
-                                      fontSize: 12,
-                                    ),
-                                  ),
-                                  SizedBox(height: 5),
-                                  Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Icon(Icons.bed, color: Colors.amber),
-                                      Text(
-                                        "4 Beds",
-                                        style: TextStyle(
-                                          color: Colors.grey[400],
-                                        ),
-                                      ),
-                                      Icon(
-                                        Icons.bathtub_outlined,
-                                        color: Colors.amber,
-                                      ),
-                                      Text(
-                                        "4 Baths",
-                                        style: TextStyle(
-                                          color: Colors.grey[400],
-                                        ),
-                                      ),
-                                      Icon(
-                                        Icons.directions_car_filled_outlined,
-                                        color: Colors.amber,
-                                      ),
-                                      Text(
-                                        "1 Garaj",
-                                        style: TextStyle(
-                                          color: Colors.grey[400],
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ],
+                          );
+                        },
+                        child: Container(
+                          width: 305,
+                          height: 390,
+                          decoration: BoxDecoration(
+                            color: AppColors.darkGreyColor,
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.vertical(
+                                  top: Radius.circular(15),
+                                ),
+                                child: Image.asset(
+                                  "assets/images/House.jpg",
+                                  height: 272,
+                                ),
                               ),
-                            ),
-                          ],
+                              Padding(
+                                padding: EdgeInsets.all(20),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'CRAFTSMAN HOUSE',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                        letterSpacing: 0.5,
+                                      ),
+                                    ),
+                                    SizedBox(height: 4),
+                                    Text(
+                                      '520 N Beaudry Ave Los Angeles',
+                                      style: TextStyle(
+                                        color: Colors.grey[400],
+                                        fontSize: 12,
+                                      ),
+                                    ),
+                                    SizedBox(height: 5),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Icon(Icons.bed, color: Colors.amber),
+                                        Text(
+                                          "4 Beds",
+                                          style: TextStyle(
+                                            color: Colors.grey[400],
+                                          ),
+                                        ),
+                                        Icon(
+                                          Icons.bathtub_outlined,
+                                          color: Colors.amber,
+                                        ),
+                                        Text(
+                                          "4 Baths",
+                                          style: TextStyle(
+                                            color: Colors.grey[400],
+                                          ),
+                                        ),
+                                        Icon(
+                                          Icons.directions_car_filled_outlined,
+                                          color: Colors.amber,
+                                        ),
+                                        Text(
+                                          "1 Garaj",
+                                          style: TextStyle(
+                                            color: Colors.grey[400],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                       SizedBox(width: 10),
