@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/screen/details_view.dart';
+import 'package:untitled/screen/save_view.dart';
 import 'package:untitled/utils/app_colors.dart';
 
 class HomeView extends StatelessWidget {
@@ -48,7 +49,14 @@ class HomeView extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => SaveView(),
+                              ),
+                            );
+                          },
                           icon: Icon(
                             Icons.bookmark_border,
                             size: 35,
